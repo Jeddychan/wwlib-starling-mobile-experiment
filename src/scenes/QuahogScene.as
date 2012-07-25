@@ -10,6 +10,8 @@ package scenes
     import starling.events.TouchPhase;
 	import scenes.Scene;
 	
+	import flash.filters.BlurFilter;
+	
 	import starling.animation.IAnimatable;
 	
 	/**
@@ -29,6 +31,14 @@ package scenes
 			__logo.addEventListener(TouchEvent.TOUCH, onTouch);
 			__logo.loadImage("assets/scenes/quahog_960.png");
 			addChild(__logo)
+			
+			/*
+			var myBlur = new flash.filters.BlurFilter(0,0,1);
+			var myTempFilters:Array = __logo.filters; 
+			myTempFilters.push(myBlur);
+			__logo.filters = myTempFilters;
+			*/
+			
 		}
 		
 		//////////
